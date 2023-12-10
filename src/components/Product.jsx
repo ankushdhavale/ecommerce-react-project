@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 
 const Product = ({post}) => {
 
-  const {cart} = useSelector((state)=> state);
+  const { cart } = useSelector((state)=> state);
 
   const dispatch = useDispatch();
 

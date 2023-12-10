@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { toast } from 'react-hot-toast'
 import { remove } from '../redux/Slices/CartSlice'
 
-const CartItem = ( { item}) => {
+const CartItem = ( { item }) => {
 
   const dispatch = useDispatch();
 
@@ -17,10 +17,12 @@ const CartItem = ( { item}) => {
         <div className="flex justify-between py-3.5 px-2.5 gap-14 flex-col md:flex-row">
 
             <div className="md:w-[30%] w-full flex justify-center items-center">
-              <img className="w-[40%] md:w-[50%] lg:w-full" src= {item.image} />
+              <img className="w-[40%] md:w-[50%] lg:w-full" 
+              src= {item.image} />
             </div>
             <div className="md:w-[70%] w-full flex flex-col gap-5">
-              <h1 className="text-xl font-[600] text-slate-700">{item.title}</h1>
+              <h1 className="text-xl font-[600] text-slate-700">
+              {item.title}</h1>
                 <h1 className="text-slate-700">{
               item.description.split(" ").slice(0,15).join(" ") + "..."}
                 </h1>
